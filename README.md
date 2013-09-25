@@ -9,11 +9,11 @@ Versions:
 
 ## Running
 
-    # docker run -d mthenw/jetty
+    # docker run -d mthenw/jetty-cargo
     092b9a6e0b7c
     # docker ps
-    ID            IMAGE                COMMAND               CREATED        STATUS        PORTS
-    092b9a6e0b7c  mthenw/jetty:latest  java -Djetty.home=/o  3 seconds ago  Up 3 seconds  49175->8080  
+    ID            IMAGE                      COMMAND               CREATED        STATUS        PORTS
+    092b9a6e0b7c  mthenw/jetty-cargo:latest  java -Djetty.home=/o  3 seconds ago  Up 3 seconds  49175->8080  
 
 ## Building
 

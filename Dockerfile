@@ -1,17 +1,18 @@
-# Jetty & Cargo
+# Java, Jetty and Cargo
 # 
 # WEBSITE https://github.com/mthenw/docker-jetty-cargo 
-# VERSION 0.1.0
+# VERSION 0.2.0
 
-FROM base
+FROM ubuntu:quantal
 MAINTAINER Maciej Winnicki "maciej.winnicki@gmail.com"
 
-RUN apt-get update
-
 # Install Java
-RUN apt-get install -y openjdk-7-jre-headless
-RUN mkdir /usr/java
-RUN ln -s /usr/lib/jvm/java-7-openjdk-amd64 /usr/java/default
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:webupd8team/java
+RUN apt-get update
+RUN echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | /usr/bin/debconf-set-selections
+RUN apt-get install -y oracle-java7-installer
 
 # Install Jetty
 ADD http://eclipse.org/downloads/download.php?file=/jetty/stable-9/dist/jetty-distribution-9.0.5.v20130815.tar.gz&r=1 /opt/jetty.tar.gz
