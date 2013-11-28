@@ -13,11 +13,11 @@ Versions:
 
 ## Running
 
-    # docker run -d mthenw/jetty-cargo
+    # docker run -d -p 8080 mthenw/jetty-cargo
     092b9a6e0b7c
     # docker ps
-    ID            IMAGE                      COMMAND               CREATED        STATUS        PORTS
-    092b9a6e0b7c  mthenw/jetty-cargo:latest  java -Djetty.home=/o  3 seconds ago  Up 3 seconds  49175->8080  
+    CONTAINER ID   IMAGE                      COMMAND                CREATED              STATUS              PORTS                    NAMES
+    2bf1f924f2b4   mthenw/jetty-cargo:latest  java -Djetty.home=/o   About a minute ago   Up About a minute   0.0.0.0:49153->8080/tcp  lonely_tesla6
 
 ## Deploy Java application
 

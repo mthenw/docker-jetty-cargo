@@ -1,7 +1,7 @@
 # Java, Jetty and Cargo
 # 
 # WEBSITE https://github.com/mthenw/docker-jetty-cargo 
-# VERSION 0.3.0
+# VERSION 0.4.0
 
 FROM ubuntu:quantal
 MAINTAINER Maciej Winnicki "maciej.winnicki@gmail.com"
@@ -15,10 +15,11 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | /usr/bin/debcon
 RUN apt-get install -y oracle-java7-installer
 
 # Install Jetty
-ADD http://eclipse.org/downloads/download.php?file=/jetty/9.1.0.v20131115/dist/jetty-distribution-9.1.0.v20131115.tar.gz&r=1 /opt/jetty.tar.gz
+ADD http://eclipse.org/downloads/download.php?file=/jetty/9.0.7.v20131107/dist/jetty-distribution-9.0.7.v20131107.tar.gz&r=1 /opt/jetty.tar.gz
 RUN tar -xvf /opt/jetty.tar.gz -C /opt/
 RUN rm /opt/jetty.tar.gz
-RUN mv /opt/jetty-distribution-9.1.0.v20131115 /opt/jetty
+RUN mv /opt/jetty-distribution-9.0.7.v20131107 /opt/jetty
+RUN rm -rf /opt/jetty/webapps.demo
 RUN useradd jetty -U -s /bin/false
 RUN chown -R jetty:jetty /opt/jetty
 
