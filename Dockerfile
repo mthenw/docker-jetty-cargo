@@ -3,16 +3,8 @@
 # WEBSITE https://github.com/mthenw/docker-jetty-cargo
 # VERSION 0.5.0
 
-FROM ubuntu:quantal
+FROM dockerfile/java:oracle-java7
 MAINTAINER Maciej Winnicki "maciej.winnicki@gmail.com"
-
-# Install Java
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:webupd8team/java
-RUN apt-get update
-RUN echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | /usr/bin/debconf-set-selections
-RUN apt-get install -y oracle-java7-installer
 
 # Install Jetty
 RUN wget -O /opt/jetty.tar.gz "http://eclipse.org/downloads/download.php?file=/jetty/9.0.7.v20131107/dist/jetty-distribution-9.0.7.v20131107.tar.gz&r=1"
