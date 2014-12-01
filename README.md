@@ -1,9 +1,10 @@
 # docker-jetty-cargo
 
-Dockerfile for setting up [Docker](https://github.com/dotcloud/docker) container with [Jetty](http://www.eclipse.org/jetty/) and [Cargo](http://cargo.codehaus.org/) installed.
+Dockerfile for setting up [Docker](https://github.com/docker/docker) container with [Jetty](http://www.eclipse.org/jetty/) and [Cargo](http://cargo.codehaus.org/) installed.
 
 Versions:
 
+* Java 7 (Oracle)
 * Jetty 9.0.7
 * Cargo 1.4.4
 
@@ -22,7 +23,6 @@ Versions:
 ## Deploy Java application
 
 While container is running Java application can be deployed using Cargo plugin for [Maven](http://cargo.codehaus.org/Maven2+plugin) or [Gradle](https://github.com/bmuschko/gradle-cargo-plugin). Port on which docker exposes Jetty is on ```docker ps``` output.
-
 
 ## Building
 
