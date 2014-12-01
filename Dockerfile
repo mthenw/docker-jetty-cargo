@@ -1,7 +1,7 @@
 # Java, Jetty and Cargo
-# 
-# WEBSITE https://github.com/mthenw/docker-jetty-cargo 
-# VERSION 0.4.0
+#
+# WEBSITE https://github.com/mthenw/docker-jetty-cargo
+# VERSION 0.5.0
 
 FROM ubuntu:quantal
 MAINTAINER Maciej Winnicki "maciej.winnicki@gmail.com"
