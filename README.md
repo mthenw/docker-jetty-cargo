@@ -4,7 +4,7 @@ Dockerfile for setting up [Docker](https://github.com/docker/docker) container w
 
 Versions:
 
-* Java 7 (Oracle)
+* Java 7
 * Jetty 9.0.7
 * Cargo 1.4.4
 

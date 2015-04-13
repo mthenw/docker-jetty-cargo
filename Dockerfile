@@ -3,7 +3,7 @@
 # WEBSITE https://github.com/mthenw/docker-jetty-cargo
 # VERSION 0.5.0
 
-FROM dockerfile/java:oracle-java7
+FROM java:7
 MAINTAINER Maciej Winnicki "maciej.winnicki@gmail.com"
 
 # Install Jetty
